@@ -1,0 +1,29 @@
+Title:
+Continious delivery: Reliable software develoyment through automation
+
+Abstract:
+In much of today's technology industry there is a focus on getting ideas from
+paper to implementation and in front of users as quickly as possible. This
+allows for rapid iteration of the software with real feedback from users to
+drive the direction of the project, which features are needed, which can be
+improved, and which can be removed. Continuous delivery is a software design
+practice that attempts to shorten this cycle time in a way that minimizes risk
+through build repeatability, test automation, and deployment automation.
+
+In this talk, I hope to demonstrate the effectiveness of the principles of
+continuous delivery by taking us through the evolution of a software design
+process using a simple web application to drive the examples. We will start
+with a process which uses none of the concepts of continuous delivery and
+slowly adds them (using specific tools as examples) such that we can see the
+philosophy of each step along the way. Some of the tools that will be discussed
+include git, Travis CI, and Heroku. Attendees will walk away with the tools and
+experience necessary to begin implementing the discussed principles in their
+own projects at a small scale.
+
+Bio:
+Jesse Szwedko is a Pittsburgh native who graduated from the University of
+Pittsburgh in 2011 with a BS and MS in Computer Science (the latter under the
+direction of Drs. Alexandros Labrinidis and Panos Chrysanthis) with a focus on
+data management and web application development.  He currently works for
+Modcloth, Inc. focusing on systems integration and internal facing web
+services.

@@ -1,12 +1,11 @@
-# Continous Delivery: Reliable software development through automation
-
----
-
-# ![modcloth](modcloth.png)
+# Continous Delivery:
+# Reliable software development through automation
 
 ## Jesse Szwedko
 ## j.szwedko@modcloth.com
 ## @jesse.szwedko
+
+# ![modcloth](modcloth.png)
 
 ---
 
@@ -30,7 +29,7 @@ _Continuous Delivery (CD) is a design practice used in software development to a
 
 ![agile](agile.jpg)
 
-## 1 - 2 week cycles
+## 7 - 30 days
 ## Continuous feedback
 
 # Presenter Notes
@@ -94,8 +93,6 @@ Allow the user to create ToDos
 
 ---
 
-# Do it live
-
 ![Do it live](live.jpg)
 
 ---
@@ -116,6 +113,7 @@ Allow the user to create ToDos
 - Broken code is immediately visible to end user
 - Can not debug code (reveal application secrets)
 - End user sees a lot of volatility
+- Cannot easily undo changes
 
 ---
 
@@ -140,24 +138,7 @@ Decentralized
 
 ---
 
-# Distributed version control
-
-![dcvs](dvcs.png)
-
----
-
-# Version control example
-
-# Presenter Notes
-- Demonstrate commit, log, branch
-- Demonstrate needing to see current changes
-- git log w/ branches ("alternative timelines")
-
----
-
-# We will use git & github (distributed)
-
-![github](git_and_github.jpg)
+# ![github](git_and_github.jpg)
 
 # Presenter Notes
 - Image from http://programmers.stackexchange.com/questions/35074/im-a-subversion-geek-why-should-i-consider-or-not-consider-mercurial-or-git-or
@@ -165,17 +146,24 @@ Decentralized
 
 ---
 
+# Version control example
+
+# Presenter Notes
+- Demonstrate commit, log, revert, checkout
+- Demonstrate needing to see current changes
+
+---
+
 # Advantages
 
-- Can "deploy" code at any point in history (revert bugs)
+- Can deploy code at any point in history (e.g. to revert bugs)
 - Can see why changes were performed
 - Allow for collaboration
 
 # Presenter Notes
-- Imagine collaborating on a text document (someone would have to "merge" the changes)
-- `git bisect`
+- Imagine collaborating on code
 
----
+----
 
 # Still, we need to develop in a way where we can experiment
 
@@ -186,8 +174,6 @@ Decentralized
 - Develop features, fix bugs, experiment locally
 - Push changes to server only after you are done
 - (optionally) Use Vagrant to spin up development environment similar to deployment server
-
-![deploy](deploy.jpg)
 
 # Presenter Notes
 - Use vagrant to spin up machine similar to "production" (especially when on Windows)
@@ -203,7 +189,7 @@ Decentralized
 
 # Presenter Notes
 - Develop adding of description text field
-- Push to github
+- Push to github (show on Github)
 - `git pull` on server
 - Broken because of data migration!
 - Are not updating JSON builders
@@ -217,6 +203,10 @@ Decentralized
 - Experimentation
 
 # Presenter Notes
+
+---
+
+![continuous delivery diagram](Continuous_Delivery_process_diagram.png)
 
 ---
 
@@ -241,7 +231,6 @@ Decentralized
 # Deployment tasks
 
 - Copy code
-- Compile assets
 - Migrate database
 - Restart web server
 
@@ -258,22 +247,21 @@ Decentralized
 
 # Presenter Notes
 - Review capistrano configuration
+- Delete app/current
 - Deploy
+- Motivate need for tests
 
 ---
 
 # Advantages
 
 - Eliminate risk of multi-step deployments
+- Deploying to multiple servers
 - Automation as documentation
 
 ---
 
-# Feature request: As a user, I should be able to add a description for each todo
-
-# Presenter Notes
-- Add description but introduce bug with title (cannot save title)
-- Motivate need for tests
+![continuous delivery diagram](Continuous_Delivery_process_diagram.png)
 
 ---
 
@@ -291,13 +279,21 @@ Decentralized
 - Testing framework
 - Alternatives include RSpec, TestUnit
 
+----
+
+# Feature request: As a user, I should be able to add a description for each todo
+
+# Presenter Notes
+
 ---
 
 # MiniTest example
 
 # Presenter notes
+- Add description, but break title
 - Add view spec for show template to assert fields
 - Break test
+- Fix test
 
 ---
 
@@ -318,23 +314,16 @@ Decentralized
 - _Build artifacts_
 
 # Presenter Notes
+- git log w/ branches ("alternative timelines")
+- Branch
 - Add .travis.yml
-
----
-
-# Advantages
-
-- Running tests happens automatically (you can trust other pull requests)
-- Running application under many different environments
-- Kick off longer test runs in the background
-
 ---
 
 # Feature request: As a user, I should be able to add a description for each todo
 
 ---
 
-# Full example
+# CI Example (full example)
 
 # Presenter Notes
 - Create branch
@@ -347,6 +336,14 @@ Decentralized
 
 ---
 
+# Advantages
+
+- Running tests happens automatically (you can trust other pull requests)
+- Running application under many different environments
+- Kick off longer test runs in the background
+
+---
+
 # Conclusion
 
 ![continuous delivery diagram](Continuous_Delivery_process_diagram.png)
@@ -355,15 +352,23 @@ Decentralized
 
 # Mistakes we knew we were making
 - Skipped infrastructure configuration
-- You should try to avoid "bulding" on the server
-  - E.g. we did asset compilation
+- You should try to avoid "building" on the server
+    - E.g. we did asset compilation
 - You should have a test stage target for deployment that is identical to production
-  - Some issues are environment specific
+    - Some issues are environment specific
 
 ---
 
-# ![modcloth](modcloth.png)
+# Questions
 
 ## Jesse Szwedko
 ## j.szwedko@modcloth.com
 ## @jesse.szwedko
+
+# ![modcloth](modcloth.png)
+
+---
+
+# [Devops Days](http://devopsdays.org/events/2014-pittsburgh/)
+
+![devopsdays](devopsdays.jpeg)

@@ -9,11 +9,21 @@
 
 ---
 
+# Agile
+
+![agile](agile.jpg)
+
+## Continuous feedback
+
+# Presenter Notes
+- Waterfall is "similar" just with a longer timeline
+- Flikr deploys 10 times a day
+
+---
+
 # Continuous Delivery
 
 _Continuous Delivery (CD) is a design practice used in software development to automate and improve the process of software delivery._ - Wikipedia
-
-![continuous delivery diagram](Continuous_Delivery_process_diagram.png)
 
 # Presenter Notes
 - Anytime you are doing something manual, automate it
@@ -21,20 +31,15 @@ _Continuous Delivery (CD) is a design practice used in software development to a
 
 ---
 
+.fx: full
+
 ![Automation](automation.png)
 
 ---
 
-# Agile
+.fx: full
 
-![agile](agile.jpg)
-
-## 7 - 30 days
-## Continuous feedback
-
-# Presenter Notes
-- Waterfall is "similar" just with a longer timeline
-- Flikr deploys 10 times a day
+![continuous delivery diagram](Continuous_Delivery_process_diagram.png)
 
 ---
 
@@ -73,9 +78,7 @@ Allow the user to create ToDos
 
 ---
 
-# Technology
-
-![ruby](ruby.jpg)
+# ![ruby](ruby.jpg)
 
 ![Rails](rails.jpg)
 
@@ -119,28 +122,19 @@ Allow the user to create ToDos
 
 # Version control
 
-Track changes to source code
-
-Centralized
-
-- CVS
-- SVN
-- Perforce
-
-Decentralized
-
-- Git
-- Mercurial
+## Track changes to source code
 
 # Presenter Notes
-- See source code at any point in time
-- Source code example (show commit, checkout of older version)
+- Started with making copies of files
+- Unable to get back to stable state after changes
 
 ---
 
 # ![github](git_and_github.jpg)
 
 # Presenter Notes
+- See source code at any point in time
+- Source code example (show commit, checkout of older version)
 - Image from http://programmers.stackexchange.com/questions/35074/im-a-subversion-geek-why-should-i-consider-or-not-consider-mercurial-or-git-or
 - Demonstrate commit and push to github
 
@@ -206,11 +200,21 @@ Decentralized
 
 ---
 
+.fx: full
+
 ![continuous delivery diagram](Continuous_Delivery_process_diagram.png)
 
 ---
 
 # Closer, but multi-step deployments introduce risk
+
+---
+
+# Deployment tasks
+
+- Copy code
+- Migrate database
+- Restart web server
 
 ---
 
@@ -225,14 +229,6 @@ Decentralized
 
 # Presenter Notes
 - Rule of 3s
-
----
-
-# Deployment tasks
-
-- Copy code
-- Migrate database
-- Restart web server
 
 ---
 
@@ -261,7 +257,17 @@ Decentralized
 
 ---
 
+.fx: full
+
 ![continuous delivery diagram](Continuous_Delivery_process_diagram.png)
+
+---
+
+# How do we make sure the site is stable before each deploy?
+
+# Presenter Notes:
+- Poke the site manually (does not scale)
+- Stop regressions
 
 ---
 
@@ -269,11 +275,10 @@ Decentralized
 
 - Describe what the code *should* do
 - Catch regressions
-- Force better design (TDD)
 
 ---
 
-# Enter MiniTest
+# MiniTest
 
 # Presenter Notes
 - Testing framework
@@ -287,7 +292,7 @@ Decentralized
 
 ---
 
-# MiniTest example
+# Testing example
 
 # Presenter notes
 - Add description, but break title
@@ -315,6 +320,7 @@ Decentralized
 
 # Presenter Notes
 - git log w/ branches ("alternative timelines")
+- Github model uses pull requests
 - Branch
 - Add .travis.yml
 ---
@@ -346,6 +352,10 @@ Decentralized
 
 # Conclusion
 
+---
+
+.fx: full
+
 ![continuous delivery diagram](Continuous_Delivery_process_diagram.png)
 
 ---
@@ -364,8 +374,28 @@ Decentralized
 ## Jesse Szwedko
 ## j.szwedko@modcloth.com
 ## @jesse.szwedko
+## This talk: github.com/jszwedko/continuous-delivery-pitt-tasks (slides are on gh-pages branch)
 
 # ![modcloth](modcloth.png)
+
+---
+
+# Technologies
+
+# Used here:
+
+- Ruby
+- Ruby on Rails
+- Capistrano
+- MiniTest
+- TravisCi
+
+# Others:
+
+- Ansible
+- Vagrant
+- Chef
+- Puppet
 
 ---
 

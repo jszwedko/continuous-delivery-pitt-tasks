@@ -4,12 +4,12 @@
 ## Jesse Szwedko
 ## j.szwedko@modcloth.com
 ## @jesse.szwedko
-## This talk: [github.com/jszwedko/continuous-delivery-pitt-tasks](github.com/jszwedko/continuous-delivery-pitt-tasks) (slides are on gh-pages branch)
 
 
 ### Location: University of Pittsburgh
 ### Date: 4/4/2012
 ### Audience: Those with no or little background in continuous delivery (version control, automated testing, continuous integration, etc).
+### This talk: [github.com/jszwedko/continuous-delivery-pitt-tasks](github.com/jszwedko/continuous-delivery-pitt-tasks) (slides are on gh-pages branch)
 
 # ![modcloth](modcloth.png)
 

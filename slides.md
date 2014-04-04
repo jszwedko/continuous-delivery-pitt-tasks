@@ -3,7 +3,7 @@
 
 ## Jesse Szwedko
 ## j.szwedko@modcloth.com
-## @jesse.szwedko
+## @jesse_szwedko
 
 
 ### Location: University of Pittsburgh
@@ -444,7 +444,7 @@
 
 ## Jesse Szwedko
 ## j.szwedko@modcloth.com
-## @jesse.szwedko
+## @jesse_szwedko
 ## This talk: github.com/jszwedko/continuous-delivery-pitt-tasks (slides are on gh-pages branch)
 
 ## Further reading: [Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912)

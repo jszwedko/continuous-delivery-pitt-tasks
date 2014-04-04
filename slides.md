@@ -4,6 +4,12 @@
 ## Jesse Szwedko
 ## j.szwedko@modcloth.com
 ## @jesse.szwedko
+## This talk: [github.com/jszwedko/continuous-delivery-pitt-tasks](github.com/jszwedko/continuous-delivery-pitt-tasks) (slides are on gh-pages branch)
+
+
+### Location: University of Pittsburgh
+### Date: 4/4/2012
+### Audience: Those with no or little background in continuous delivery (version control, automated testing, continuous integration, etc).
 
 # ![modcloth](modcloth.png)
 
@@ -23,7 +29,7 @@
 
 # Continuous Delivery
 
-_Continuous Delivery (CD) is a design practice used in software development to automate and improve the process of software delivery._ - Wikipedia
+## _Continuous Delivery (CD) is a design practice used in software development to automate and improve the process of software delivery._ - Wikipedia
 
 # Presenter Notes
 - Anytime you are doing something manual, automate it
@@ -51,8 +57,8 @@ _Continuous Delivery (CD) is a design practice used in software development to a
 - Version control
 - Local development
 - Automated deploys
-- Testing
 - Automated testing
+- Continuous integration
 
 
 ## Complete example
@@ -63,13 +69,12 @@ _Continuous Delivery (CD) is a design practice used in software development to a
 
 ![tasks application](tasks.png)
 
-Allow the user to create ToDos
-
-- Create
-- Read
-- Update
-- Delete
-- List
+- Allow the user to create ToDos
+    - Create
+    - Read
+    - Update
+    - Delete
+    - List
 
 # Presenter Notes
 - Simple CRUD application
@@ -120,6 +125,19 @@ Allow the user to create ToDos
 
 ---
 
+# Outline
+
+## Process Evolution
+
+- Cowboy coding
+- Version control
+- Local development
+- Automated deploys
+- Automated testing
+- Continuous integration
+
+---
+
 # Version control
 
 ## Track changes to source code
@@ -150,7 +168,7 @@ Allow the user to create ToDos
 
 # Advantages
 
-- Can deploy code at any point in history (e.g. to revert bugs)
+- Can deploy code at any point in history (e.g. to rollback to stable version)
 - Can see why changes were performed
 - Allow for collaboration
 
@@ -163,11 +181,24 @@ Allow the user to create ToDos
 
 ---
 
+# Outline
+
+## Process Evolution
+
+- Cowboy coding
+- Version control
+- Local development
+- Automated deploys
+- Automated testing
+- Continuous integration
+
+---
+
 # Develop locally
 
 - Develop features, fix bugs, experiment locally
 - Push changes to server only after you are done
-- (optionally) Use Vagrant to spin up development environment similar to deployment server
+- Consider using a virtual machine if your development enviroment is too different from the production environment
 
 # Presenter Notes
 - Use vagrant to spin up machine similar to "production" (especially when on Windows)
@@ -218,6 +249,19 @@ Allow the user to create ToDos
 
 ---
 
+# Outline
+
+## Process Evolution
+
+- Cowboy coding
+- Version control
+- Local development
+- Automated deploys
+- Automated testing
+- Continuous integration
+
+---
+
 # Automated deployments
 
 - Specify each step of the deploy as code
@@ -236,6 +280,7 @@ Allow the user to create ToDos
 
 # Presenter Notes
 - Automated deployment tool (primarily used for Ruby applications)
+- Other examples: ansible, chef, bash
 
 ---
 
@@ -263,11 +308,24 @@ Allow the user to create ToDos
 
 ---
 
-# How do we make sure the site is stable before each deploy?
+# How do we make sure the application is stable before each deploy?
 
-# Presenter Notes:
-- Poke the site manually (does not scale)
+# Presenter Notes
+- Poke the application manually (does not scale)
 - Stop regressions
+
+---
+
+# Outline
+
+## Process Evolution
+
+- Cowboy coding
+- Version control
+- Local development
+- Automated deploys
+- Automated testing
+- Continuous integration
 
 ---
 
@@ -281,7 +339,7 @@ Allow the user to create ToDos
 # MiniTest
 
 # Presenter Notes
-- Testing framework
+- Automated testing framework
 - Alternatives include RSpec, TestUnit
 
 ----
@@ -292,7 +350,7 @@ Allow the user to create ToDos
 
 ---
 
-# Testing example
+# Automated testing example
 
 # Presenter notes
 - Add description, but break title
@@ -306,13 +364,26 @@ Allow the user to create ToDos
 
 ---
 
+# Outline
+
+## Process Evolution
+
+- Cowboy coding
+- Version control
+- Local development
+- Automated deploys
+- Automated testing
+- Continuous integration
+
+---
+
 ![Travis CI](travis.png)
 
 ---
 
 # Continuous integration server
 
-"Build" is triggered by commit or push to VCS
+## "Build" is triggered by commit or push to VCS
 
 - Run set-up tasks
 - Run tests
@@ -363,7 +434,7 @@ Allow the user to create ToDos
 # Mistakes we knew we were making
 - Skipped infrastructure configuration
 - You should try to avoid "building" on the server
-    - E.g. we did asset compilation
+    - E.g. we did asset compilation (translating of "higher" level languages to CSS and JS)
 - You should have a test stage target for deployment that is identical to production
     - Some issues are environment specific
 
@@ -376,6 +447,8 @@ Allow the user to create ToDos
 ## @jesse.szwedko
 ## This talk: github.com/jszwedko/continuous-delivery-pitt-tasks (slides are on gh-pages branch)
 
+## Further reading: [Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912)
+
 # ![modcloth](modcloth.png)
 
 ---
@@ -384,18 +457,17 @@ Allow the user to create ToDos
 
 # Used here:
 
-- Ruby
-- Ruby on Rails
-- Capistrano
-- MiniTest
-- TravisCi
+- [Ruby](https://www.ruby-lang.org/) & [Ruby on Rails](http://rubyonrails.org/)
+- [Capistrano](http://capistranorb.com/)
+- [MiniTest](https://github.com/seattlerb/minitest)
+- [TravisCI](https://travis-ci.org/)
 
 # Others:
 
-- Ansible
-- Vagrant
-- Chef
-- Puppet
+- [Ansible](https://github.com/ansible/ansible)
+- [Vagrant](http://www.vagrantup.com/)
+- [Chef](http://www.getchef.com/chef/)
+- [Puppet](http://puppetlabs.com/)
 
 ---
 

@@ -11,12 +11,23 @@ img[alt="modcloth"] {
   float: left;
 }
 
-img[alt="Do it live"] {
-  width: 500px;
+img[alt="Do it live"], img[alt="github"], img[alt="agile"], img[alt="capistrano"], img[alt="devopsdays"] {
+  width: 700px;
   height: auto;
 }
 
-img[alt="github"] {
-  width: 500px;
-  height: auto;
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+li {
+  font-size: 2em;
+}
+
+li li {
+  font-size: 1em;
 }
